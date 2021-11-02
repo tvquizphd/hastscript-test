@@ -1,4 +1,4 @@
-## Hot Cold Guide
+## Hastscript Test
 
 ### Install
 
