@@ -13,9 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.3.0
-
-      - name: Install
-        run: install
-
-      - name: Build
-        run: build
+        with:
+          cmd: install
+      - uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build
