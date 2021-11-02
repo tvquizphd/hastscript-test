@@ -1,28 +1,19 @@
 ## Hastscript Test
 
-### Install
+## Update
+This was created to solve [an isuue first noticed](https://github.com/syntax-tree/hastscript/issues/16) in a package that uses Typescript. The issue was that Typescript failed to import `*.d.ts` files without explicitly including the extension. I have only tested this error in TypeScript `4.5.0-beta`.
+
+This issue has been [resovlved](https://github.com/tvquizphd/hastscript-test/pull/2) by adding the following key to `compilerOptions` in `tsconfig.json`:
 
 ```
-yarn i
+"moduleResolution": "node"
 ```
 
-### Build
+This parameter changes how Typescript resolves module names. See [here](https://www.typescriptlang.org/docs/handbook/module-resolution.html) for more.
+
+
+### Install and Build
 
 ```
-yarn build
-```
-
-Error message:
-```
-yarn run v1.22.11
-$ tsc
-node_modules/hastscript/lib/html.d.ts(19,27): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/html.d.ts(20,39): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/html.d.ts(21,37): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/html.d.ts(23,14): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/svg.d.ts(19,27): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/svg.d.ts(20,39): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/svg.d.ts(21,37): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-node_modules/hastscript/lib/svg.d.ts(23,14): error TS2307: Cannot find module './jsx-classic' or its corresponding type declarations.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+yarn i && build
 ```
