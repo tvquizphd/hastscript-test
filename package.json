@@ -1,0 +1,14 @@
+{
+  "name": "hastscript-test",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "hastscript": "^7.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0-beta"
+  }
+}
