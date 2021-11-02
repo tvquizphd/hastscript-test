@@ -3,7 +3,7 @@
     "target": "es6",
     "outDir": "dist",
     "declaration": true,
-    "module": "node12"
+    "module": "commonjs"
   },
   "main": "./src/index.ts",
   "types": "./src/index.d.ts",
